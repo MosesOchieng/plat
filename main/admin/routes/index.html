@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>City center</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin: 0; padding: 0; }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+        .marker {
+          background-image: url('https://docs.mapbox.com/mapbox-gl-js/assets/washington-monument.jpg');
+          background-size: cover;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+
+        .marker:hover {
+          background-image: url('https://docs.mapbox.com/mapbox-gl-js/assets/washington-monument.jpg');
+        }
+        #add-route-button {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          z-index: 1;
+          background-color: blue;
+          color: white;
+          padding: 10px;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id='map'></div>
+<div id='add-route-button'>Add Route</div>
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYWJoYXlrcmlzaG5hdmJoYXR0IiwiYSI6ImNrbjJ0ZTF0ZjFhd2UycXBmMG9pNDU2anIifQ.F-4VoRzJdWSISMU4AYrt8g';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/satellite-v9',
+        center: [36.8156, -1.2921],
+        zoom: 13
+    });
+     
+      
+    var busStopLocations = [
+        {coordinates: [36.7841, -1.2813], name: 'Pangani'},
+        {coordinates: [36.8372, -1.2733], name: 'Westlands'},
+        {coordinates: [36.8101, -1.2929], name: 'City Hall'},
+        {coordinates: [36.8094, -1.2764], name: 'Railway Station'},
+        {coordinates: [36.8224, -1.2923], name: 'University of Nairobi'},
+        {coordinates: [36.8341, -1.2929], name: 'Parklands'},
+        {coordinates: [36.8154, -1.2921], name: 'Kenyatta International Convention Centre'},
+        {coordinates: [36.8207, -1.2747], name: 'Ngara'},
+        {coordinates: [36.8269, -1.2822], name: 'Muthaiga'},
+    ];
+
+    // Add bus stop markers to the map
+    busStopLocations.forEach(function(busStop) {
+        var marker = new mapboxgl.Marker({
+            className: 'marker'
+        })
+        .setLngLat(busStop.coordinates)
+        .setPopup(new mapboxgl.Popup().setHTML(`<h3>${busStop.name}</h3>`))
+        .addTo(map);
+    });
+
+    // Add button to add a new route
+    var addRouteButton = document.getElementById('add-route-button');
+    addRouteButton.addEventListener('click', function() {
+        console.log('Add route button clicked');
+    });
+
+</script>
+</body>
+</html>
+
+
