@@ -26,18 +26,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
 
         // Verify the password
         if (password_verify($password, $row['password'])) {
+            // Login successful
             echo "Login successful";
 
             // Redirect to the dashboard page
             header("location: ../dashboard/index.php");
             exit;
         } else {
+            // Incorrect password
             echo "Incorrect password";
         }
     } else {
+        // User does not exist
         echo "User does not exist. Please register.";
     }
 }
+
+// Enable error reporting
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
