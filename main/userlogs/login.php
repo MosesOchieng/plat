@@ -65,7 +65,7 @@
 </head>
 <body>
 	<h1>Login</h1>
-	<form action="login_handler.php" method="POST">
+	<form action=" ../dashboard/index.html" method="POST">
 		<label for="username">Username:</label>
 		<input type="email" name="username" required>
 
