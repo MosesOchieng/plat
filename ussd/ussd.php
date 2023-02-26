@@ -52,7 +52,7 @@ if ($text == "") {
     $response .="4. Donholm. \n";
     $response .="4. Westlands. \n";
     $response .="5. Pangani. \n";
-    $response .="6. Langata. \n";
+    $response .="6. Langata \n";
     $response .="7. Kasarani.";
 }else if($text == "1*2"){
     $response = "CON Kindly choose your destination  \n";
@@ -76,15 +76,15 @@ if ($text == "") {
     $response .="6. Langata. \n";
     $response .="7. Kasarani.";
 }else if($text == "1*3"){
-    $response .="CON Kindly add in this format the location the person is moving to ,together with where they are and they will receive a short SMS with the directions. \n";
+    $response ="CON Kindly add in this format the location the person is moving to ,together with where they are and they will receive a short SMS with the directions. \n";
 }else if($text == "2*3"){
-    $response .="CON Kindly add in this format the location the person is moving to ,together with where they are and they will receive a short SMS with the directions. \n";
+    $response ="CON Kindly add in this format the location the person is moving to ,together with where they are and they will receive a short SMS with the directions. \n";
 }else if($text == "1*1*1"){
-    $response .="END Thank you for choosing this option ,you will receive an information on the place to get your Mat.";
+    $response ="END Thank you for choosing this option ,you will receive an information on the place to get your Mat.";
 }else if($text == "2*1*1"){
-    $response .="END Thank you for choosing this option ,you will receive an information on the place to get your Mat.";
+    $response ="END Thank you for choosing this option ,you will receive an information on the place to get your Mat.";
 }else if($text == "1*1*2"){
-    $response .="END Thank you for choosing this option ,you will receive an information on the place to get your Mat.";
+    $response ="END Thank you for choosing this option ,you will receive an information on the place to get your Mat.";
      }
 
 // Echo the response back to the API
