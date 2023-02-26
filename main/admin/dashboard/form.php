@@ -12,15 +12,6 @@
     </style>
 </head>
 <body>
-    <form onsubmit="addPlace(); return false;">
-        <label for="place">Place Name:</label>
-        <input type="text" id="place" name="place" /><br>
-        <label for="lon">Longitude:</label>
-        <input type="text" id="lon" name="lon" /><br>
-        <label for="lat">Latitude:</label>
-        <input type="text" id="lat" name="lat" /><br>
-        <button type="submit">Add Marker</button>
-    </form>
     <div id='map'></div>
     <script>
         mapboxgl.accessToken = 'pk.eyJ1IjoiYWJoYXlrcmlzaG5hdmJoYXR0IiwiYSI6ImNrbjJ0ZTF0ZjFhd2UycXBmMG9pNDU2anIifQ.F-4VoRzJdWSISMU4AYrt8g';
@@ -28,30 +19,26 @@
             container: 'map',
             style: 'mapbox://styles/mapbox/streets-v11',
             center: [36.8156, -1.2921],
-            zoom: 10
+            zoom: 12
         });
 
-        // Add marker at specified coordinates
-        function addMarker(lon, lat, place) {
-            var marker = new mapboxgl.Marker({
-                color: "#FF0000",
-                draggable: false
-            })
-            .setLngLat([lon, lat])
-            .setPopup(new mapboxgl.Popup().setHTML('<h3>' + place + '</h3>'))
-            .addTo(map);
-            map.flyTo({ center: [lon, lat], zoom: 13 });
-        }
-
-        // Get input values and add marker
-        function addPlace() {
-            var place = document.getElementById('place').value;
-            var lon = parseFloat(document.getElementById('lon').value);
-            var lat = parseFloat(document.getElementById('lat').value);
-            addMarker(lon, lat, place);
-        }
+        // Add markers at bus stages with popups
+        var busStages = [
+            {name: 'Githurai ; Jenga Sacco, Weka Sacco.', lon: 36.9019, lat: -1.2115},
+            {name: 'Muthaiga ; Lili Sacco, Karatina Sacco', lon: 36.8204, lat: -1.2444},
+            {name: 'CBD ;  Saku Sacco, Mugithu Saccu', lon: 36.8251, lat: -1.2864},
+            {name: 'Koinange Street ; Baraka Sacco', lon: 36.827658,lat: -1.277465}
+        ];
+        busStages.forEach(function(stage) {
+            var popup = new mapboxgl.Popup({ offset: 25 }).setHTML('<h3>' + stage.name + '</h3>');
+            new mapboxgl.Marker({ color: '#FF0000' })
+                .setLngLat([stage.lon, stage.lat])
+                .setPopup(popup)
+                .addTo(map);
+        });
     </script>
 </body>
 </html>
+
 
 

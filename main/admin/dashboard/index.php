@@ -25,9 +25,8 @@
       <div class="menu">
         <div class="title">Navigation</div>
         <ul>
-          <li><a> <i class="fa fa-home"></i>Home</a></li>
-          <li><i class="fa fa-signal"></i>Routes</li>
-          <li class="active"> <i class="fa fa-tasks"></i>Register Sacco</li>
+          <li><a href="form.php"><i class="fa fa-home"></i>Bus stages around</a></li>
+          <li class="active"><a href="bus.location.php"> <i class="fa fa-tasks"></i>Routes</a></li>
           <li> <i class="fa fa-envelope"></i>Messages</li>
         </ul>
       </div>
