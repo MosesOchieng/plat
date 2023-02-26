@@ -1,31 +1,13 @@
-var $loginMsg = $(".loginMsg"),
-  $login = $(".login"),
-  $signupMsg = $(".signupMsg"),
-  $signup = $(".signup"),
-  $frontbox = $(".frontbox");
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
 
-$("#switch1").on("click", function () {
-  $loginMsg.toggleClass("visibility");
-  $frontbox.addClass("moving");
-  $signupMsg.toggleClass("visibility");
+signUpButton.addEventListener('click', () =>
+    container.classList.add('right-panel-active'));
 
-  $signup.toggleClass("hide");
-  $login.toggleClass("hide");
-});
+signInButton.addEventListener('click', () =>
+    container.classList.remove('right-panel-active'));
 
-$("#switch2").on("click", function () {
-  $loginMsg.toggleClass("visibility");
-  $frontbox.removeClass("moving");
-  $signupMsg.toggleClass("visibility");
-
-  $signup.toggleClass("hide");
-  $login.toggleClass("hide");
-});
-
-setTimeout(function () {
-  $("#switch1").click();
-}, 1000);
-
-setTimeout(function () {
-  $("#switch2").click();
-}, 3000);
+// https://Github.com/YasinDehfuli
+// 	 https://Codepen.io/YasinDehfuli
+// Disigned By Nisay

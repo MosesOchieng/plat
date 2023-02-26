@@ -297,41 +297,38 @@ button.ghost {
 <section>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <form action="#">
-                <h1>Sign Up</h1>
+            <form action="register_handler.php" method="POST">
+                <h1>User Sign Up</h1>
                 <div class="social-container">
-                    <a href="https://Github.com/YasinDehfuli" target="_blank" class="social"><i class="fab fa-github"></i></a>
-                    <a href="https://Codepen.io/YasinDehfuli" target="_blank" class="social"><i class="fab fa-codepen"></i></a>
-                    <a href="mailto:Ydehfuli@gmail.com" target="_blank" class="social"><i class="fab fa-google"></i></a>
                 </div>
                 <span>Or use your Email for registration</span>
                 <label>
                     <input type="text"name="username" placeholder="Name"/>
                 </label>
                 <label>
-                    <input type="email" name=" placeholder="Email"/>
+                    <input type="email" name="email" placeholder="Email"/>
                 </label>
                 <label>
-                    <input type="password" placeholder="Password"/>
+                    <input type="password" name="password" placeholder="Password"/>
                 </label>
-                <button style="margin-top: 9px">Sign Up</button>
+                <button style="margin-top: 9px" name="signup">Sign Up</button>
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="login_handler.php">
-                <h1>Sign in</h1>
+            <form action="login_handler.php" method="POST">
+                <h1> User Sign in</h1>
                 <div class="social-container">
                    
                 </div>
                 <span> Or sign in using E-Mail Address</span>
                 <label>
-                    <input type="email" name="email" placeholder="Email"/>
+                    <input type="email" name="mail" placeholder="Email"/>
                 </label>
                 <label>
-                    <input type="password"  name="password" placeholder="Password"/>
+                    <input type="password"  name="pass" placeholder="Password"/>
                 </label>
                 <a href="#">Forgot your password?</a>
-                <button class="s">Sign In</button>
+                <button name="submit">Sign In</button>
             </form>
         </div>
         <div class="overlay-container">

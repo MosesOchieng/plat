@@ -6,14 +6,14 @@ require_once 'connection.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
 
     // Initialize variables
-    $username = $password = "";
+    $mail = $password = "";
 
     // Get input data
-    $username = trim($_POST["user"]);
+    $mail = trim($_POST["mail"]);
     $password = trim($_POST["pass"]);
 
     // Prepare a select statement
-    $sql = "SELECT * FROM users WHERE username = '$username'";
+    $sql = "SELECT * FROM users WHERE email = '$mail'";
 
     // Execute the select statement
     $result = $conn->query($sql);
@@ -38,6 +38,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
         echo "User does not exist. Please register.";
     }
 }
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 // Close connection
 $conn->close();
