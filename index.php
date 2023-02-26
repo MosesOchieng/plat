@@ -37,10 +37,10 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="browsejobs.html" class="nav-link">Register a Matatu Sacco.</a></li>
-	          <li class="nav-item"><a href="candidates.html" class="nav-link">About</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	          <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="main/admin/register.php" class="nav-link">Register a Matatu Sacco.</a></li>
+	          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+	          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
 >
 
 	        </ul>
@@ -114,7 +114,7 @@
 				            <div class="tab-content p-4" id="v-pills-tabContent">
 
 				              <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
-				              	<form action="main/load/signup.php" class="search-job">
+				              	<form action="main/userlogs/signup.php" class="search-job">
 				              		<div class="row no-gutters">
 				              			<div class="col-md mr-md-2">
 				              				<div class="form-group">
@@ -161,7 +161,7 @@
 				              </div>
 
 				              <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-performance-tab">
-				              	<form action="main/load/signup.php" class="search-job">
+				              	<form action="main/userlogs/signup.php" class="search-job">
 				              		<div class="row">
 				              			<div class="col-md">
 				              				<div class="form-group">
