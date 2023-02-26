@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Place Ya Mat</title>
+    <title>Place Ya Mat!</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -38,7 +38,7 @@
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="main/admin/register.php" class="nav-link">Register a Matatu Sacco.</a></li>
+	          <li class="nav-item"><a href="main/admin/register.php" class="nav-link">Register a Matatu Sacco</a></li>
 	          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
 	          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
 >
@@ -67,7 +67,7 @@
 				              	</div>
 				              	<div class="desc text-left">
 					                <strong class="number" data-number="4.6">0</strong>
-					                <span>Million People use public paratransit during the day in Nairobi alone.</span>
+					                <span>Million People use public paratransit during the day in Nairobi alone</span>
 				                </div>
 				              </div>
 				            </div>
@@ -80,7 +80,7 @@
 				              	</div>
 				              	<div class="desc text-left">
 					                <strong class="number" data-number="70">0</strong>
-					                <span> percent of users use Matatu according to CNN where the sector is described Chaotic. </span>
+					                <span> percent of users use Matatu according to CNN where the sector is described Chaotic</span>
 					              </div>
 				              </div>
 				            </div>
@@ -93,7 +93,7 @@
 				              	</div>
 				              	<div class="desc text-left">
 					                <strong class="number" data-number="4">0</strong>
-					                <span>Join the 4 Million people in locating your commuter Matatu areas and stops by Login in.</span>
+					                <span>Join the 4 Million people in locating your commuter Matatu areas and stops by Login in</span>
 					              </div>
 				              </div>
 				            </div>
@@ -134,8 +134,7 @@
 							                      	<option value="">Full Time</option>
 							                        <option value="">Part Time</option>
 							                        <option value="">Freelance</option>
-							                        <option value="">Internship</option>
-							                        <option value="">Temporary</option>
+							                        <option value="">Internship</option>							                        
 							                      </select>
 							                    </div>
 									              </div>
