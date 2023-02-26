@@ -1,7 +1,6 @@
 <?php
 
 
-
 // Read the variables sent via POST from our API
 $sessionId   = $_POST["sessionId"];
 $serviceCode = $_POST["serviceCode"];

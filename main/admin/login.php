@@ -66,8 +66,8 @@
 <body>
 	<h1>Login</h1>
 	<form action="login_handler.php" method="POST">
-		<label for="username">Username:</label>
-		<input type="email" name="username" required>
+		<label for="Email">Username:</label>
+		<input type="Email" name="username" required>
 
 		<label for="password">Password:</label>
 		<input type="password" name="password" required>

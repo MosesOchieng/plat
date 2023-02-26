@@ -21,10 +21,8 @@
     <h2>Enter Bus Stop Location</h2>
     <label for='name'>Name:</label>
     <input type='text' id='name' placeholder='Enter bus stop name' />
-    <label for='lat'>Latitude:</label>
-    <input type='text' id='lat' placeholder='Enter latitude' />
-    <label for='lng'>Longitude:</label>
-    <input type='text' id='lng' placeholder='Enter longitude' />
+    <label for='address'>Address:</label>
+    <input type='text' id='address' placeholder='Enter bus stop address or location' />
     <button onclick='addMarker()'>Add Bus Stop</button>
 </div>
 <script>
@@ -38,12 +36,17 @@
 
     function addMarker() {
         var name = document.getElementById('name').value;
-        var lat = document.getElementById('lat').value;
-        var lng = document.getElementById('lng').value;
-        var marker = new mapboxgl.Marker()
-            .setLngLat([lng, lat])
-            .setPopup(new mapboxgl.Popup().setHTML('<h3>' + name + '</h3>'))
-            .addTo(map);
+        var address = document.getElementById('address').value;
+        // Get the latitude and longitude for the address using the Mapbox Geocoding API
+        fetch('https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(address) + '.json?access_token=' + mapboxgl.accessToken)
+            .then(response => response.json())
+            .then(data => {
+                var lngLat = data.features[0].center;
+                var marker = new mapboxgl.Marker()
+                    .setLngLat(lngLat)
+                    .setPopup(new mapboxgl.Popup().setHTML('<h3>' + name + '</h3><p>' + address + '</p>'))
+                    .addTo(map);
+            });
     }
 </script>
 </body>

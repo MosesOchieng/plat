@@ -1,4 +1,6 @@
 <?php
+ header("Refresh: 5; URL= ../dashboard/index.php"); 
+
 // Include the database connection file
 require_once 'connection.php';
 
@@ -9,11 +11,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
     $mail = $password = "";
 
     // Get input data
-    $mail = trim($_POST["mail"]);
-    $password = trim($_POST["pass"]);
+    $username= trim($_POST["username"]);
+    $password = trim($_POST["password"]);
 
     // Prepare a select statement
-    $sql = "SELECT * FROM users WHERE email = '$mail'";
+    $sql = "SELECT * FROM users WHERE username = '$username'";
 
     // Execute the select statement
     $result = $conn->query($sql);
@@ -38,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
         }
     } else {
         // User does not exist
-        echo "User does not exist. Please register.";
+        echo "Welcome to Place Ya Mat.";
     }
 }
 

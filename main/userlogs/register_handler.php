@@ -1,6 +1,4 @@
-
 <?php
-header( "refresh:5;url= index.php" );
 // Include the database connection file
 require_once 'connection.php';
 
@@ -8,7 +6,7 @@ require_once 'connection.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["signup"])) {
 
     // Initialize variables
-    $username = $password = $email = "";
+    $username = $email = $password = "";
 
     // Get input data
     $username = trim($_POST["username"]);
@@ -16,19 +14,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["signup"])) {
     $password = trim($_POST["password"]);
 
     // Hash the password
-    $password = password_hash($password, PASSWORD_DEFAULT);
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     // Prepare an insert statement
-    $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
-    if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
+    $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')");
+    
+
+    // Execute the insert statement
+    if ($stmt->execute()) {
+        echo "Registration successful";
+        // Redirect to the login page
+        header("location: login.php");
+        exit;
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $stmt->error;
     }
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+    // Close statement
+    $stmt->close();
 }
+
 // Close connection
 $conn->close();
 ?>

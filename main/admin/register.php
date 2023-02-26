@@ -1,7 +1,8 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login</title>
+	<title>Signup</title>
 	<style>
 		body {
 			background-color: #f1f1f1;
@@ -36,6 +37,7 @@
 			text-align: left;
 		}
 
+		input[type="text"],
 		input[type="email"],
 		input[type="password"] {
 			border-radius: 3px;
@@ -64,25 +66,29 @@
 	</style>
 </head>
 <body>
-	<h1>Login</h1>
-	<form action="login_handler.php" method="POST">
+	<h1>Signup</h1>
+	<form action="register_handler.php" method="POST" >
 		<label for="username">Username:</label>
-		<input type="email" name="username" required>
+		<input type="text" name="username" required>
+
+		<label for="email">Email:</label>
+		<input type="email" name="email" required>
 
 		<label for="password">Password:</label>
 		<input type="password" name="password" required>
 
-		<input type="submit" name="submit" value="Login">
+		<input type="submit" name="signup" value="Signup">
 	</form>
 
 	<script>
 		function validateForm() {
 			// Get input field values
-			var email = document.forms["loginForm"]["email"].value;
-			var password = document.forms["loginForm"]["password"].value;
+			var username = document.forms["signupForm"]["username"].value;
+			var email = document.forms["signupForm"]["email"].value;
+			var password = document.forms["signupForm"]["password"].value;
 
 			// Check if input fields are empty
-			if (email == "" || password == "") {
+			if (username == "" || email == "" || password == "") {
 				alert("Please fill in all fields");
 				return false;
 			}

@@ -114,7 +114,7 @@
 				            <div class="tab-content p-4" id="v-pills-tabContent">
 
 				              <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
-				              	<form action="main/load/index.php" class="search-job">
+				              	<form action="main/load/signup.php" class="search-job">
 				              		<div class="row no-gutters">
 				              			<div class="col-md mr-md-2">
 				              				<div class="form-group">
@@ -161,7 +161,7 @@
 				              </div>
 
 				              <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-performance-tab">
-				              	<form action="main/load/index.php" class="search-job">
+				              	<form action="main/load/signup.php" class="search-job">
 				              		<div class="row">
 				              			<div class="col-md">
 				              				<div class="form-group">
@@ -285,44 +285,38 @@
         		<div class="carousel-candidates owl-carousel">
         			<div class="item">
 		        		<a href="#" class="team text-center">
-		        			<div class="img" style="background-image: url(images/person_1.jpg);"></div>
-		        			<h2>Danica Lewis</h2>
-		        			<span class="position">Western City, UK</span>
+		        			<div class="img" style="background-image: url(k.jpeg);"></div>
+		        			<h2>Eric Muriithi</h2>
+		        			<span class="position">Chief Technology Officer</span>
 		        		</a>
         			</div>
         			<div class="item">
 	        			<a href="#" class="team text-center">
-		        			<div class="img" style="background-image: url(images/person_2.jpg);"></div>
-		        			<h2>Nicole Simon</h2>
-		        			<span class="position">Western City, UK</span>
+		        			<div class="img" style="background-image: url(l.jpeg);"></div>
+		        			<h2>Gloria Muli</h2>
+		        			<span class="position">Chief Operation Officer</span>
 		        		</a>
 	        		</div>
 	        		<div class="item">
 	        			<a href="#" class="team text-center">
-		        			<div class="img" style="background-image: url(images/person_3.jpg);"></div>
-		        			<h2>Cloe Meyer</h2>
-		        			<span class="position">Western City, UK</span>
+		        			<div class="img" style="background-image: url(m.jpeg);"></div>
+		        			<h2>Praise Mulanda</h2>
+		        			<span class="position">VP Marketing</span>
 		        		</a>
 	        		</div>
 	        		<div class="item">
 	        			<a href="#" class="team text-center">
-		        			<div class="img" style="background-image: url(images/person_4.jpg);"></div>
-		        			<h2>Rachel Clinton</h2>
-		        			<span class="position">Western City, UK</span>
+		        			<div class="img" style="background-image: url(n.jpeg);"></div>
+		        			<h2>Ivy Mulanda</h2>
+		        			<span class="position">Chief Financial Officer.</span>
 		        		</a>
 	        		</div>
+	        	
 	        		<div class="item">
 	        			<a href="#" class="team text-center">
-		        			<div class="img" style="background-image: url(images/person_5.jpg);"></div>
-		        			<h2>Dave Buff</h2>
-		        			<span class="position">Western City, UK</span>
-		        		</a>
-	        		</div>
-	        		<div class="item">
-	        			<a href="#" class="team text-center">
-		        			<div class="img" style="background-image: url(images/person_6.jpg);"></div>
-		        			<h2>Dave Buff</h2>
-		        			<span class="position">Western City, UK</span>
+		        			<div class="img" style="background-image: url(moses.jpg);"></div>
+		        			<h2>Moses Ochieng</h2>
+		        			<span class="position">Chief Exectuive Officer.</span>
 		        		</a>
 	        		</div>
         		</div>
